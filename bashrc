@@ -4,4 +4,4 @@ alias gps='git push'
 alias t=tig
 alias ts='tig status'
 alias his="history"
-alias emacs="emacs -nw"
+alias e="emacs -nw"
