@@ -2,3 +2,5 @@ bashrcはホームディレクトリの.bashrcのシンボリックリンクに�
 spacemacsはホームディレクトリの.spacemacsのシンボリックリンクにする
 
 todo : このファイルをスクリプト化する
+
+
