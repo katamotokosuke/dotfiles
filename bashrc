@@ -5,3 +5,5 @@ alias t=tig
 alias ts='tig status'
 alias his="history"
 alias e="emacs -nw"
+alias v="nvim"
+

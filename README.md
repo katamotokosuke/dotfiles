@@ -1,5 +1,6 @@
 bashrcはホームディレクトリの.bashrcのシンボリックリンクにする
 spacemacsはホームディレクトリの.spacemacsのシンボリックリンクにする
+spacevimはホームディレクトリの.SpaceVim.d/のシンボリックリンクにする
 
 todo : このファイルをスクリプト化する
 
