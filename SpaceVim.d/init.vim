@@ -66,7 +66,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
-NeoBundle "ctrlpvim/ctrlp.vim"
+NeoBundle 'tpope/vim-rails'
 call neobundle#end()
 
 " Required:
