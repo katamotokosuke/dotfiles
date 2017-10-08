@@ -1,7 +1,12 @@
-bashrcはホームディレクトリの.bashrcのシンボリックリンクにする
-spacemacsはホームディレクトリの.spacemacsのシンボリックリンクにする
-spacevimはホームディレクトリの.SpaceVim.d/のシンボリックリンクにする
+brew.rb =>
+homebrewのインストール
+必要なパッケージをインストール
 
-todo : このファイルをスクリプト化する
+vim.rb=>
+spacevimをインストール
+neobundleをインストール
+SpaceVimの設定ファイルのシンボリックリンクを貼る
 
+bash_config.rb=>
+.bash_profileと.bashrcのシンボリックリンクを貼る
 
