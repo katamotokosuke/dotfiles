@@ -10,4 +10,7 @@
 #delete installer
 `rm -rf install.sh`
 
-`ln -s $PWD/SpaceVim.d $HOME/.SpaceVim.d`
+home_path = File.expand_path("~")
+unless File.exist?(home_path + "/.SpaceVim.d/")
+    `ln -s $PWD/SpaceVim.d/  $HOME/.SpaceVim.d`
+end
