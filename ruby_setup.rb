@@ -1,10 +1,10 @@
 puts "Start installation for Ruby "
 
 rb_versions = `rbenv install --list`
+rb_version = ""
 puts rb_versions
 
 puts "Please select ruby version"
-
 loop_flag = true
 while loop_flag  do 
     rb_version = gets.chomp
