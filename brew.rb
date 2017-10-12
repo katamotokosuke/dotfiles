@@ -11,13 +11,13 @@ end
 
 `brew update`
 #Install what i need
-install_list = ["autoconf", "openssl", "rbenv", "ruby-build", "git", "pkg-config", "readline", "tig"]
+install_list = ["autoconf", "openssl", "rbenv", "ruby-build", "git", "pkg-config", "readline", "tig", "kotlin"]
 
 install_list.each do |item|
    system("brew install #{item}") 
 end
 
-cask_list = ["google-chrome", "iterm2", "vagrant", "vagrant-manager", "virtualbox"]
+cask_list = ["google-chrome", "iterm2"]
 cask_list.each do |item|
     system("brew cask install #{item}")
 end
