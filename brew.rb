@@ -11,7 +11,7 @@ end
 
 `brew update`
 #Install what i need
-install_list = ["autoconf", "openssl", "rbenv", "ruby-build", "git", "pkg-config", "readline", "tig", "kotlin"]
+install_list = ["autoconf", "openssl", "rbenv", "ruby-build", "git", "pkg-config", "readline", "tig", "kotlin", "cask"]
 
 install_list.each do |item|
    system("brew install #{item}") 
