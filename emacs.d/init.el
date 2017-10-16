@@ -5,6 +5,8 @@
 (package-initialize)
 
 (require 'linum)
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+;;(cask-initialize)
 
 ;;行番号表示
 (global-linum-mode)
@@ -16,4 +18,11 @@
 (tool-bar-mode 0)
 
 ;;補完
-;;(global-company-mode)
+(global-company-mode)
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+(define-key company-search-map (kbd "C-n") 'company-select-next)
+(define-key company-search-map (kbd "C-p") 'company-select-previous)
+
+
+
