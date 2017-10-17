@@ -16,6 +16,14 @@
 (setq inhibit-startup-screen t)
 ;;メニューバーを消す
 (tool-bar-mode 0)
+(menu-bar-mode 0)
+
+;;対応するカッコを光らせる
+(show-paren-mode t)
+
+;;スクロールは1行
+(setq scroll-conservatively 1)
+
 
 ;;()や "" の後ろを自動挿入
 (electric-pair-mode 1)
