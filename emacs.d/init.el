@@ -3,10 +3,10 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
-
 (require 'linum)
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
-;;(cask-initialize)
+(cask-initialize)
+
 
 ;;行番号表示
 (global-linum-mode)
@@ -17,12 +17,15 @@
 ;;メニューバーを消す
 (tool-bar-mode 0)
 
+;;()や "" の後ろを自動挿入
+(electric-pair-mode 1)
+
+;;neotree
+(global-set-key (kbd "C-x C-t") 'neotree-toggle)
+
 ;;補完
 (global-company-mode)
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-search-map (kbd "C-n") 'company-select-next)
 (define-key company-search-map (kbd "C-p") 'company-select-previous)
-
-
-

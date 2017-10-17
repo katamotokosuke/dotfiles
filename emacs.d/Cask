@@ -30,3 +30,4 @@
 (depends-on "ruby-end")
 (depends-on "ruby-block")
 (depends-on "company")
+(depends-on "neotree")
