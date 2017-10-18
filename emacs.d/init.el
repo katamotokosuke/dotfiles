@@ -28,8 +28,11 @@
 ;;()や "" の後ろを自動挿入
 (electric-pair-mode 1)
 
-;;neotree
+;;key binding
 (global-set-key (kbd "C-x C-t") 'neotree-toggle)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-a") 'back-to-indentation)
+
 
 ;;補完
 (global-company-mode)
