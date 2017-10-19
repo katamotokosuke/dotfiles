@@ -40,3 +40,6 @@
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
 (define-key company-search-map (kbd "C-n") 'company-select-next)
 (define-key company-search-map (kbd "C-p") 'company-select-previous)
+
+;;projectil-rails
+(projectile-rails-global-mode)

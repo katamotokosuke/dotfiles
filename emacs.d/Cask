@@ -31,3 +31,4 @@
 (depends-on "ruby-block")
 (depends-on "company")
 (depends-on "neotree")
+(depends-on "projectile-rails")
