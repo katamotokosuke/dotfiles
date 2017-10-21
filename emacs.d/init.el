@@ -24,6 +24,8 @@
 ;;スクロールは1行
 (setq scroll-conservatively 1)
 
+;;ハイライト
+(global-auto-highlight-symbol-mode t)
 
 ;;()や "" の後ろを自動挿入
 (electric-pair-mode 1)
