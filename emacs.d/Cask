@@ -32,3 +32,4 @@
 (depends-on "company")
 (depends-on "neotree")
 (depends-on "projectile-rails")
+(depends-on "ctags-update")
