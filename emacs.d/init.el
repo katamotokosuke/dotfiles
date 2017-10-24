@@ -6,6 +6,7 @@
 (require 'linum)
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
+(add-hook 'after-init-hook #' global-flycheck-mode)
 
 ;;tab
 (defun other-window-or-split ()

@@ -34,4 +34,4 @@
 (depends-on "projectile-rails")
 (depends-on "ctags-update")
 (depends-on "auto-highlight-symbol")
-
+(depends-on "flycheck")
