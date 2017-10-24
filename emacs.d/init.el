@@ -1,12 +1,16 @@
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
 (package-initialize)
 (require 'linum)
+(require 'helm-config)
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 (add-hook 'after-init-hook #' global-flycheck-mode)
+(helm-mode 1)
 
 ;;tab
 (defun other-window-or-split ()
@@ -44,6 +48,12 @@
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "C-t") 'other-window-or-split)
+(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-M-x-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key global-map (kbd "C-x C-b") 'helm-for-files)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-x") 'helm-M-x)
+
 
 ;;補完
 (global-company-mode)
@@ -55,5 +65,4 @@
 ;;projectil-rails
 (projectile-rails-global-mode)
 
-;;theme
-(load-theme 'deeper-blue)
+
