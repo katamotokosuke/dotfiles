@@ -7,6 +7,14 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
+;;tab
+(defun other-window-or-split ()
+  (interactive)
+  (when (one-window-p)
+    (split-window-horizontally))
+  (other-window 1))
+
+
 
 ;;行番号表示
 (global-linum-mode)
@@ -34,7 +42,7 @@
 (global-set-key (kbd "C-x C-t") 'neotree-toggle)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-a") 'back-to-indentation)
-
+(global-set-key (kbd "C-t") 'other-window-or-split)
 
 ;;補完
 (global-company-mode)
@@ -45,3 +53,6 @@
 
 ;;projectil-rails
 (projectile-rails-global-mode)
+
+;;theme
+(load-theme 'deeper-blue)
