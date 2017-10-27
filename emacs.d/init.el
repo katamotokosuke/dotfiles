@@ -1,7 +1,3 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
 
 (package-initialize)
 (require 'linum)
@@ -10,6 +6,12 @@
 (add-hook 'after-init-hook #' global-flycheck-mode)
 (require 'helm-config)
 (helm-mode 1)
+(load-theme 'manoj-dark)
+;;projectile
+(setq projectile-completion-system 'helm)
+;;projectil-rails
+(projectile-rails-global-mode)
+
 
 ;;tab
 (defun other-window-or-split ()
@@ -42,6 +44,10 @@
 ;;()や "" の後ろを自動挿入
 (electric-pair-mode 1)
 
+(defun helm-grep-do-git-grep-all()
+  (interactive)
+  (helm-grep-do-git-grep t))
+
 ;;key binding
 (global-set-key (kbd "C-x C-t") 'neotree-toggle)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
@@ -49,9 +55,15 @@
 (global-set-key (kbd "C-t") 'other-window-or-split)
 (define-key global-map (kbd "C-x C-b") 'helm-for-files)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
-(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key global-map (kbd "C-x f") 'projectile-find-file)
+(define-key global-map(kbd "C-h C-g") 'helm-grep-do-git-grep-all)
 (global-set-key (kbd "M-x") 'helm-M-x)
+
+
+;;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 ;;(define-key helm-M-x-map (kbd "TAB") 'helm-execute-persistent-action)
+
+
 
 
 
@@ -62,8 +74,6 @@
 (define-key company-search-map (kbd "C-n") 'company-select-next)
 (define-key company-search-map (kbd "C-p") 'company-select-previous)
 
-;;projectil-rails
-(projectile-rails-global-mode)
 
-;;git gutter
-(global-git-gutter-mode +1)
+(put 'upcase-region 'disabled nil)
+
