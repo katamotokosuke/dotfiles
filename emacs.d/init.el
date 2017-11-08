@@ -19,13 +19,27 @@
   (when (one-window-p)
     (split-window-horizontally))
   (other-window 1))
+;;tabsize
+(setq default-tab-width 2)
 
+;;タイトルにフルパス表示
+(setq frame-title-format "%f")
 
 
 ;;行番号表示
 (global-linum-mode)
+
 ;;バックアップファイル作成しない
-(setq make-backup-file nil)
+(setq make-backup-file t)
+;;自動保存ファイルを作成しない
+(setq auto-save-default nil)
+;;ロックファイルを作成しない
+(setq create-lockfiles nil)
+;;Message Bufferを消す
+(setq-default message-log-max nil)
+(kill-buffer "*Messages*")
+
+
 ;;start up 画面を出さない
 (setq inhibit-startup-screen t)
 ;;メニューバーを消す
@@ -53,7 +67,7 @@
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "C-t") 'other-window-or-split)
-(define-key global-map (kbd "C-x C-b") 'helm-for-files)
+(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 (define-key global-map (kbd "C-x f") 'projectile-find-file)
 (define-key global-map(kbd "C-h C-g") 'helm-grep-do-git-grep-all)
@@ -64,9 +78,6 @@
 ;;(define-key helm-M-x-map (kbd "TAB") 'helm-execute-persistent-action)
 
 
-
-
-
 ;;補完
 (global-company-mode)
 (define-key company-active-map (kbd "C-n") 'company-select-next)
@@ -74,6 +85,4 @@
 (define-key company-search-map (kbd "C-n") 'company-select-next)
 (define-key company-search-map (kbd "C-p") 'company-select-previous)
 
-
-(put 'upcase-region 'disabled nil)
 
